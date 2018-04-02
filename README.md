@@ -1,8 +1,31 @@
-# Learning OSS development through GitHub
+﻿# Learning OSS development through GitHub
+
 
 | Participant   | Role       | ETC |
 |---------------|------------|-----|
 | Jeongkyu Shin | Instructor |     |
+| Lee jaehee    | student    |     |
+| Minseok  Kang | Student    |     |
+| Jaehun Kim.   | student    |     |
+| Hansae Ju     | Student    |     |
+| Jaewoo Yang   | Student    |     |
+| Cho young il  | Student    |     |
+| Jinsung An    | Student    |     |
+| Minwoo Son	| Student    |     |
+| Kim Dain      | Student    |     |
+| Jeongin Lee   | Student.   |     |
+| Minwoo Son.   | Student    |     |
+| Kim Dain      | Student    |     |
+| Jeongin Lee   | Student    |     |
+| YK            | Student    |     |
+| Jeong-A Im    | Student    |     |
+| Kim Tae Yoon  | Student    |     |
+| Yulim Oh      | Student    |     |
+| Jihoon Yeom   | Student    |     |
+| MinSeong Kang | Student    |     |
+| Keongi Kim    | Student    |     |
+| Sungchan Kim  | Student    |     |
+| Wonik Jang    | Student    |     |
 | Kim tae O     | Student    |     |
 | Jeshin Lee    | Student    |     |
 | Hoesung  Jung | Student^^7 | Nerd|
@@ -15,7 +38,9 @@
 | TaeWoong Kong | Student    |     |
 | KeonWoong Noh | Student    |     |
 | ChaeHyun Baek | Student    |     |
-| JK            | Student    |     |
+| SeongIn Moon  | Student    |     |
+| JeWoong Moon  | Student    |     |
+| Yushin        | Student    |     |
 | GookGon Lee   | Student    |     |
 | Hyobin Lee    | Student    |     |
 | Hayeong Lee   | Student    |     |
@@ -28,10 +53,15 @@
 | Yejun Kim     | Student    |     |
 | Yunjea Nam    | Student    |     |
 | Cho young il  | Student    |     |
+| Yerim Hwang	| Student    |     |
+| Kim yong jun  | Student    |     |
+| Yerim Hwang	| Student    |     |
 | Minjun Kim    | Student    |     |
 | JaeHun Lee    | Student    |     |
 | Taewan Park   | Student    |     |
+| HoJin Seo     | Student    |     |
 | Sungho Yun    | Student    |     |
+| Keunmo Koo.   | Genius     |     |
 
 
 # Galtron
