@@ -65,7 +65,7 @@ def checkEvents(setting, screen, stats, sb, playBtn, quitBtn, sel, bullets, alie
 #			ship.centery = event.pos[1]
 
 
-def checkKeydownEvents(event, setting, screen, stats, sb, playBtn, quitBtn, sel, bullets, aliens, eBullets, pauseBtnState2, ship1, ship2):
+def checkKeydownEvents(event, setting, screen, stats, sb, playBtn, quitBtn, sel, ship1, ship2, aliens, bullets, eBullets, pauseBtnState2):
 	"""Response to kepresses"""
 	global back
 	if event.key == pg.K_RIGHT:
