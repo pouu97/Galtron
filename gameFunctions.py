@@ -45,8 +45,6 @@ def checkEvents(setting, screen, stats, sb, playBtn, quitBtn, sel, ship, aliens,
 				if pauseBtnState == 1:
 					sounds.select_menu.play()
 					checkPlayBtn(setting, screen, stats, sb, playBtn, sel, ship, aliens, bullets, eBullets)
-					print(stats.score)
-					print("hi")
 				elif pauseBtnState == 2:
 					sounds.select_menu.play()
 					stats.mainGame = False
@@ -303,6 +301,7 @@ def updateBullets(setting, screen, stats, sb, ship, aliens, bullets, eBullets):
 	for bullet in bullets.copy():
 		if bullet.rect.bottom <= 0:
 			bullets.remove(bullet)
+
 	if setting.interception:
 		pg.sprite.groupcollide(bullets, eBullets, bullets, eBullets)
 
@@ -439,7 +438,7 @@ def updateScreen(setting, screen, stats, sb, ship, aliens, bullets, eBullets, pl
 	screen.blit(setting.bg, (0,rel_x - setting.bg.get_rect().height))
 	if rel_x < setting.screenHeight:
 		screen.blit(setting.bg, (0,rel_x))
-	x += 3
+	x += 15
 
 	#draw all the bullets
 	for bullet in bullets.sprites():
