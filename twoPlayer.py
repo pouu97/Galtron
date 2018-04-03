@@ -20,7 +20,7 @@ bgloop = 0
 
 def checkEvents(setting, screen, stats, sb, playBtn, quitBtn, sel, bullets, aliens, eBullets, ship1, ship2):
 	"""Respond to keypresses and mouse events."""
-	global pauseBtnState
+	global pauseBtnState2
 	for event in pg.event.get():
 		#Check for quit event
 		if event.type == pg.QUIT:
@@ -28,16 +28,16 @@ def checkEvents(setting, screen, stats, sb, playBtn, quitBtn, sel, bullets, alie
 
 		#Check for key down has been pressed
 		elif event.type == pg.KEYDOWN:
-			checkKeydownEvents(event, setting, screen, stats, sb, playBtn, quitBtn, sel, ship1, ship2, aliens, bullets, eBullets, pauseBtnState)
+			checkKeydownEvents(event, setting, screen, stats, sb, playBtn, quitBtn, sel, ship1, ship2, aliens, bullets, eBullets, pauseBtnState2)
 			if(stats.gameActive):
 				continue
 			if event.key == pg.K_UP:
-				if pauseBtnState > 1:
+				if pauseBtnState2 > 1:
 					sounds.control_menu.play()
-					pauseBtnState -= 1
+					pauseBtnState2 -= 1
 					sel.rect.y -= 50
 			elif event.key == pg.K_DOWN:
-				if pauseBtnState < 3:
+				if pauseBtnState2 < 3:
 					sounds.control_menu.play()
 					pauseBtnState2 += 1
 					sel.rect.y += 50	
@@ -68,7 +68,6 @@ def checkEvents(setting, screen, stats, sb, playBtn, quitBtn, sel, bullets, alie
 def checkKeydownEvents(event, setting, screen, stats, sb, playBtn, quitBtn, sel, bullets, aliens, eBullets, pauseBtnState2, ship1, ship2):
 	"""Response to kepresses"""
 	global back
-	
 	if event.key == pg.K_RIGHT:
 		ship1.movingRight = True
 	elif event.key == pg.K_LEFT:
@@ -94,6 +93,7 @@ def checkKeydownEvents(event, setting, screen, stats, sb, playBtn, quitBtn, sel,
 		ship2.shoot = True
 	#Check for pause key
 	elif event.key == pg.K_p:
+		sounds.paused.play()
 		pause(stats)
 	elif event.key == pg.K_ESCAPE:
 		#Quit game
@@ -330,14 +330,6 @@ def checkHighScore(stats, sb):
 	if stats.score > stats.highScore:
 		stats.highScore = stats.score
 		sb.prepHighScore()
-
-
-def checkEBulletShipCol(setting, stats, sb, screen, ship, aliens, bullets, eBullets):
-	"""Check for collisions using collision mask between ship and enemy bullets"""
-	for ebullet in eBullets.sprites():
-		if pg.sprite.collide_mask(ship, ebullet):
-			shipHit(setting, stats, sb, screen, ship, aliens, bullets, eBullets)
-			sb.prepShips()
 
 
 def checkHighScore(stats, sb):
