@@ -1,11 +1,13 @@
 import sys, time
 import pygame as pg
 from time import sleep
+
+#from bullet import Bullet
+import sounds
 from bullet import Bullet, SpecialBullet
 from alien import Alien
 from settings import Settings
 import random
-import sounds
 from button import Button
 
 pauseBtnState2 = 1
@@ -44,11 +46,10 @@ def checkEvents(setting, screen, stats, sb, playBtn, quitBtn, sel, bullets, alie
 			elif event.key == pg.K_RETURN:
 				if pauseBtnState2 == 1:
 					sounds.select_menu.play()
+
 					checkPlayBtn(setting, screen, stats, sb, playBtn, sel, ship1, ship2, aliens, bullets, eBullets)
 				elif pauseBtnState2 == 2:
 					sounds.select_menu.play()
-					stats.mainGame = False
-					stats.mainAbout = False
 					stats.twoPlay = False
 					stats.mainMenu = True
 					stats.resetStats()
@@ -68,10 +69,12 @@ def checkEvents(setting, screen, stats, sb, playBtn, quitBtn, sel, bullets, alie
 		#	ship2.centery = event.pos[1]
 
 
+
 def checkKeydownEvents(event, setting, screen, stats, sb, playBtn, quitBtn, sel, ship1, ship2, aliens, bullets, eBullets, pauseBtnState2):
 	"""Response to kepresses"""
 	global back
 	#Movement of the ship1 
+
 	if event.key == pg.K_RIGHT:
 		ship1.movingRight = True
 	elif event.key == pg.K_LEFT:
@@ -191,7 +194,6 @@ def resetGame():
 	reset = 1
 	with open('data-files/highscore.json', 'w') as f_obj:
 		f_obj.write('0')
-
 
 def checkPlayBtn(setting, screen, stats, sb, playBtn, sel, ship1, ship2, aliens, bullets, eBullets):
 
@@ -474,7 +476,6 @@ def drawChargeGauge(setting, screen, ship1, ship2):
 
 	pg.draw.rect(screen, (255, 255, 255), (x2, y2, 100, 10), 0)
 	pg.draw.rect(screen, color, (x2, y2, ship2.chargeGauge, 10), 0)
-
 
 def updateScreen(setting, screen, stats, sb, ship1, ship2, aliens, bullets, eBullets, playBtn, menuBtn, quitBtn, sel):	
 	"""Update images on the screen and flip to the new screen"""
